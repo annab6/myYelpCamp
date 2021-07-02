@@ -1,0 +1,42 @@
+<% layout("layouts/boilerplate") %> 
+
+<h2 class="mb-4">Personal Information</h2>
+<div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title mb-2"><i class="bi bi-person-circle"></i> <%=currentUser.username%></h3>
+      <h6 class="card-text"><%=currentUser.email%></h6>
+    </div>
+  </div>
+
+
+<% if(currentUserCampgrounds.length) { %> 
+<h2 class="mb-4">My Campgrounds</h2>
+
+    <% for (let campground of currentUserCampgrounds){ %> 
+        <div class="card mb-3">
+            <div class="row">
+                <div class="col-md-4">
+                    <% if(campground.images.length){ %> 
+                    <img src="<%=campground.images[0].url%>" alt="" class="img-fluid">
+                    <% }else{ %> 
+                        <img src="https://res.cloudinary.com/dtirk48he/image/upload/v1622452419/YelpCamp/rcepyhngklepbbzcw2qw.jpg" alt="" class="img-fluid">
+                    <% } %> 
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title"><%=campground.title %></h5>
+                        <p class="card-text"><%=campground.description %></p>
+                        <p class="card-text">
+                            <small class="text-muted"><%=campground.location %></small>
+                        </p>
+                        <a href="/campgrounds/<%=campground.id %>" class="btn btn-outline-primary btn-show-camp">View <%=campground.title %></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <% } %>    
+
+<% } else { %> 
+    <h3 class="mb-4">You don´t have any Campgrounds yet :( </h3>
+    <a href="/campgrounds/new" class="btn btn-outline-primary"> Create One</a>
+<% } %> 

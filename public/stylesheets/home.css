@@ -1,0 +1,49 @@
+body{
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),  
+    /* p1 shoes in tent godd */
+    url("https://images.unsplash.com/photo-1532339142463-fd0a8979791a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+    /* p2 mountains very good web and mob */
+    /* url("https://images.unsplash.com/photo-1589439201513-ca97cd8bc608?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"); */
+    
+    /* very good, bad mobile */
+    /* url("https://images.unsplash.com/photo-1565257074896-83694ab78bb6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80"); */
+    /* good */
+    /* url("https://images.unsplash.com/photo-1513781419235-2988ecacab83?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80"); */
+        
+    background-size: cover;
+    background-position: center;
+    text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
+}
+.cover-container{
+    max-width: 60vw;
+}
+
+.nav-logo{
+    color: rgba(255, 255, 255);
+}
+.nav-logo:hover{
+    color: rgba(255, 255, 255);
+}
+.nav-link{
+    padding: 0.25rem 0;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.5);
+    margin-left: 1rem;
+    border-bottom: 0.25rem solid transparent;
+}
+.nav-link:hover{
+    color: rgba(255, 255, 255, 0.5);
+    border-bottom-color: rgba(255, 255, 255, 0.5);
+}
+.nav-link.active{
+    color: rgba(255, 255, 255);
+    border-bottom-color: rgba(255, 255, 255);
+}
+
+.btn-secondary, .btn-secondary:hover{
+    color: #333;
+    text-shadow: none;
+    font-weight: 500;
+}
