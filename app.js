@@ -56,6 +56,7 @@ app.use(mongoSanitize({
     replaceWith: '_'
 }));
 
+const secret = process.env.SECRET || "thisshouldbeabettersecret!";
 
 const store = new MongoDBStore({
     mongoUrl: dbUrl,
@@ -67,7 +68,7 @@ store.on("error", function(e){
     console.log("SESSION STORE ERROR", e)
 })
 
-const secret = process.env.SECRET || "thisshouldbeabettersecret!";
+
 
 const sessionConfig = {
     store,
@@ -211,6 +212,7 @@ app.use((err, req, res, next) => {
 })
 
 
-app.listen(3000, () => {
-    console.log("Serving on port 3000")
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+    console.log(`Serving on port ${port}`)
 })
