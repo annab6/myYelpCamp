@@ -7,24 +7,24 @@
 
 
 
-    <% for (let campground = campgrounds.length; i>=0; campground--){ %> 
+    <% for (let i = campgrounds.length -1; i>=0; i--){ %> 
         <div class="card mb-3">
             <div class="row">
                 <div class="col-md-4">
-                    <% if(campground.images.length){ %> 
-                    <img src="<%=campground.images[0].url%>" alt="" class="img-fluid">
+                    <% if(campgrounds[i].images.length){ %> 
+                    <img src="<%=campgrounds[i].images[0].url%>" alt="" class="img-fluid">
                     <% }else{ %> 
                         <img src="https://res.cloudinary.com/dtirk48he/image/upload/v1622452419/YelpCamp/rcepyhngklepbbzcw2qw.jpg" alt="" class="img-fluid">
                     <% } %> 
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title"><%=campground.title %></h5>
-                        <p class="card-text"><%=campground.description %></p>
+                        <h5 class="card-title"><%=campgrounds[i].title %></h5>
+                        <p class="card-text"><%=campgrounds[i].description %></p>
                         <p class="card-text">
-                            <small class="text-muted"><%=campground.location %></small>
+                            <small class="text-muted"><%=campgrounds[i].location %></small>
                         </p>
-                        <a href="/campgrounds/<%=campground.id %>" class="btn btn-outline-primary">View <%=campground.title %></a>
+                        <a href="/campgrounds/<%=campgrounds[i].id %>" class="btn btn-outline-primary">View <%=campgrounds[i].title %></a>
                     </div>
                 </div>
             </div>
